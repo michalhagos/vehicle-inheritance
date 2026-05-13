@@ -3,35 +3,18 @@ package com.pluralsight;
 public class Main {
     public static void main(String[] args) {
 
-        // create a Moped and set its values using inherited setters
-        // this means even though setColor is in Vehicle we can use it on Moped
-        // because Moped extends Vehicle / it is the child class
-        Moped slowRide = new Moped();
-        slowRide.setColor("Red");
-        slowRide.setNumberOfPassengers(2);
-        slowRide.setCargoCapacity(10);
-        slowRide.setFuelCapacity(5);
+        // create a Moped using the constructor instead of setters
+        // the values are passed directly to Vehicle through super()
+        Moped slowRide = new Moped("Red", 2, 10, 5);
 
-        // create a Car and set its values using inherited setters
-        Car familyCar = new Car();
-        familyCar.setColor("Blue");
-        familyCar.setNumberOfPassengers(5);
-        familyCar.setCargoCapacity(50);
-        familyCar.setFuelCapacity(15);
+        // create a Car using the constructor instead of setters
+        Car familyCar = new Car("Blue", 5, 50, 15);
 
-        // create a SemiTruck and set its values using inherited setters
-        SemiTruck bigRig = new SemiTruck();
-        bigRig.setColor("White");
-        bigRig.setNumberOfPassengers(2);
-        bigRig.setCargoCapacity(40000);
-        bigRig.setFuelCapacity(300);
+        // create a SemiTruck using the constructor instead of setters
+        SemiTruck bigRig = new SemiTruck("White", 2, 40000, 300);
 
-        // create a Hovercraft and set its values using inherited setters
-        Hovercraft airGlider = new Hovercraft();
-        airGlider.setColor("Gray");
-        airGlider.setNumberOfPassengers(8);
-        airGlider.setCargoCapacity(500);
-        airGlider.setFuelCapacity(50);
+        // create a Hovercraft using the constructor instead of setters
+        Hovercraft airGlider = new Hovercraft("Gray", 8, 500, 50);
 
         // print all vehicle details to verify everything works
         System.out.println("--- Moped ---");
@@ -58,14 +41,6 @@ public class Main {
         System.out.println("Cargo Capacity: " + airGlider.getCargoCapacity());
         System.out.println("Fuel Capacity: " + airGlider.getFuelCapacity());
     }
-
-
-
-
-
-
-
-
 
 
 }

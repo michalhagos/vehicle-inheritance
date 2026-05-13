@@ -11,6 +11,16 @@ public class Vehicle {
     // how much fuel the vehicle can hold in gallons
     private int fuelCapacity;
 
+    // added a constructor that sets all four fields when a new vehicle is created
+// all the child classes will call this constructor using super()
+    public Vehicle(String color, int numberOfPassengers, int cargoCapacity, int fuelCapacity) {
+        this.color = color;
+        this.numberOfPassengers = numberOfPassengers;
+        this.cargoCapacity = cargoCapacity;
+        this.fuelCapacity = fuelCapacity;
+    }
+
+
     // added all getters
     // returns the color of the vehicle
     public String getColor() {
